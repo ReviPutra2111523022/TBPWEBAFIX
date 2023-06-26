@@ -1,0 +1,46 @@
+nav{
+  position: fixed;
+  top:0;
+  right:0;
+  width: 100%;
+  height:90px;
+  display:flex;
+  justify-content: flex-end;
+  align-items: center;
+  background-color: #292f39;
+}
+
+nav .account{
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  margin-right:40px;
+}
+
+nav .account .pic img{
+  width:50px;
+  height:50px;
+  border-radius:50%;
+  object-fit: cover;
+}
+
+nav .account .username{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+}
+
+.username span:nth-child(1){
+  font-size: 15px;
+  font-weight: bold;
+  font-family: 'Inter', sans-serif;
+  color:#dbdbdb;
+}
+.username span:nth-child(2){
+  font-size: 12px;
+  font-weight: 400;
+  font-family: 'Inter', sans-serif;
+  color:#ff6b6b;
+  margin-top:-3px;
+}

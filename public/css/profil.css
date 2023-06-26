@@ -1,0 +1,117 @@
+.container-profil,
+.container-edit-profil{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.container-profil .top,
+.container-edit-profil .top{
+  width: 100%; 
+}
+
+.container-profil .top img,
+.container-edit-profil .top img{
+  width: 100%;
+  height:250px;
+  object-fit: cover;
+}
+
+.container-profil .bottom{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+}
+
+.container-profil .bottom .profil-pic{
+  width:100px;
+  height:100px;
+  border-radius:50%;
+  background-color: #fff;
+  margin-top:-50px;
+  display: grid;
+  place-content: center;
+}
+.container-profil .bottom .profil-pic img{
+  width:95px;
+  height:95px;
+  border-radius:50%;
+  object-fit: cover;
+}
+
+.container-profil .bottom .nama-email{
+  display:flex;
+  flex-direction: column;
+  text-align: center;
+  margin-top:20px;
+}
+
+.container-profil .bottom .nama-email span:nth-child(1){
+  font-size:17px;
+  font-weight:bold;
+  color:#252525;
+}
+.container-profil .bottom .nama-email span:nth-child(2){
+  font-size:15px;
+  color:#4a4949;
+  margin-top:-5px;
+}
+
+.container-profil .bottom .about-me{
+  text-align:center;
+  width:70%;
+  margin-top:10px;
+}
+
+.btn-edit-profil-password{
+  display:flex;
+  gap:15px;
+}
+
+.btn-edit-profil{
+  text-decoration: none;
+  color:#fff;
+  padding:8px 12px;
+  border-radius:4px;
+  background-color: #292f36;
+  font-size:14px;
+  font-weight:600;
+  margin-top:20px;
+  transition:.2s;
+}
+
+.btn-edit-profil:hover{
+  background-color: #191c20;
+}
+
+
+.container-edit-profil .bottom{
+  width:100%;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  background-color: #fff;
+  padding:30px;
+}
+
+.container-edit-profil .bottom form{
+  padding:25px;
+  border-radius:2px;
+  background-color: #292F36;
+  color:#fff;
+}
+
+.container-edit-profil .bottom form div button{
+  width:70px;
+  height:35px;
+  border-radius:2px;
+  border:0;
+  background-color: #FF6B6B;
+  color:#fff;
+  transition:.2s;
+}
+.container-edit-profil .bottom form div button:hover{
+  background-color: #d45959;
+}

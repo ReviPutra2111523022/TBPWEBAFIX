@@ -1,0 +1,42 @@
+<nav class="wrapper-navbar">
+  <div class="navbar">
+    <div class="account">
+      <div class="pic">
+        <% if (user.avatar) { %>
+          <img src="./img/<%= user.avatar %>">
+        <% } else { %>
+          <img src="./img/akun.jpg">
+        <% } %>
+      </div>
+      <div class="username">
+        <span><%= user.username %></span>
+        <span><%= user.email %></span>
+      </div>
+    </div>
+  </div>
+</nav>
+<div class="container-profil">
+  <div class="top">
+    <img src="./img/bg-profil.jpg">
+  </div>
+  <div class="bottom">
+    <div class="profil-pic">
+      <% if (user.avatar) { %>
+        <img src="./img/<%= user.avatar %>">
+      <% } else { %>
+        <img src="./img/akun.jpg">
+      <% } %>
+    </div>
+    <div class="nama-email">
+      <span class="nama"><%= user.username %></span>
+      <span class="email"><%= user.email %></span>
+    </div>
+    <div class="about-me">
+      <%= user.about_me %>
+    </div>
+    <div class="btn-edit-profil-password">
+      <a class="btn-edit-profil" href="/edit-profil">Ubah profil</a>
+      <a class="btn-edit-profil" href="/ganti-password">Ganti password</a>
+    </div>
+  </div>
+</div>

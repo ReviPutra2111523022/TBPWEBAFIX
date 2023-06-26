@@ -1,0 +1,58 @@
+aside{
+  z-index: 10;
+  position: fixed;
+  top:0;
+  left:0;
+}
+
+.logo{
+  width: 100%;
+  height:90px;
+  display:grid;
+  place-content: center;
+}
+
+.logo a{
+  text-decoration: none;
+  font-size: 23px;
+  color:#ffffff;
+  font-weight: 600;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap:3px;
+
+}
+
+.logo a .dot-logo{
+  background-color:#8d2222;
+  width:5px;
+  height:5px;
+  border-radius: 50%;
+  margin-bottom:-13px;
+}
+
+.menu-links{
+  width: 100%;
+  height:100%;
+  display:flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+}
+
+.menu-links a{
+  width: 100%;
+  height:60px;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap:18px;
+  text-decoration: none;
+  color: #DEB992;
+  transition:.2s;
+}
+
+.menu-links a:hover{
+  color:#cf5858;
+}

@@ -1,0 +1,45 @@
+<nav class="wrapper-navbar">
+  <div class="navbar">
+    <div class="account">
+      <div class="pic">
+        <% if (user.avatar) { %>
+          <img src="./img/<%= user.avatar %>">
+        <% } else { %>
+          <img src="./img/akun.jpg">
+        <% } %>
+      </div>
+      <div class="username">
+        <span><%= user.username %></span>
+        <span><%= user.email %></span>
+      </div>
+    </div>
+  </div>
+</nav>
+<div class="container-edit-profil">
+  <div class="top">
+    <img src="./img/bg-profil.jpg">
+  </div>
+  <div class="bottom">
+    <form action="/edit-profil" method="post" enctype="multipart/form-data">
+      <div class="mb-1">
+        <label for="username" class="form-label">Username</label>
+        <input type="text" name="username" class="form-control" id="username">
+      </div>
+      <div class="mb-1">
+        <label for="email" class="form-label">Email</label>
+        <input type="email" name="email" class="form-control" id="email">
+      </div>
+      <div class="mb-1">
+        <label for="about_me" class="form-label">About me</label>
+        <textarea name="about_me" class="form-control" rows="3"></textarea>
+      </div>
+      <div class="mb-1">
+        <label for="avatar" class="form-label">Avatar</label>
+        <input type="file" name="avatar" class="form-control" id="avatar">
+      </div>
+      <div class="text-center mb-3 mt-3">
+        <button type="submit">Save</button>
+      </div>
+    </form>
+  </div>
+</div>

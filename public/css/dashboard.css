@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Fjalla+One&family=Varela+Round&display=swap');
+.wrapper-postingan{
+  display: grid;
+  grid-gap: 30px;
+  padding:30px;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+}
+
+.postingan{
+  text-decoration: none;
+  /* width:300px; */
+  background:#292f39;
+  display:flex;
+  flex-direction:column;
+  justify-content: start;
+  gap:30px;
+  padding:26px;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+  border-radius:10px;
+  transition:.2s
+}
+
+.postingan:hover{
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+
+.judul-form{
+  margin:0;
+  color:#DEB992;
+  font-family: 'Fjalla One', sans-serif;
+  font-weight: 400;
+  text-transform: capitalize;
+}
+
+.deskripsi{
+  font-size:14px;
+  color:#b1b0b0;
+  line-height: 1.2; /* ketinggian maksimum kontainer (5 baris x 1.2em) */
+  overflow: hidden; /* teks yang melebihi ketinggian kontainer akan disembunyikan */
+  text-overflow: ellipsis; /* menampilkan ellipsis di akhir teks yang terpotong */
+  white-space: nowrap;
+}
+
+.postingan .bottom{
+  display:flex;
+  gap:10px;
+}
+
+.postingan .bottom div{
+  display:flex;
+  justify-content: start;
+  align-items: center;
+}
+
+.postingan .bottom .pic-uploader img{
+  width:45px;
+  height:45px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.btn-add-form{
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  padding:20px;
+  margin-top: 40px;
+}
+
+.btn-add-form button{
+  color:#ffffff;
+  width:70px;
+  height:70px;
+  border-radius:50px;
+  background-color: #292f39;
+  font-size:40px;
+  font-weight:100;
+  border:0;
+  margin-right:40px;
+  transition:.3s;
+  
+}
+.mb-5{
+  background-color:#d6d6d6 ;
+ 
+}
+
+
+
+

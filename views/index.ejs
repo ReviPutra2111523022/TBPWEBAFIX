@@ -1,0 +1,81 @@
+<nav class="wrapper-navbar">
+  <div class="navbar">
+    <div class="account">
+      <div class="pic">
+        <% if (user.avatar) { %>
+          <img src="./img/<%= user.avatar %>" >
+        <% } else { %>
+          <img src="./img/akun.jpg" >
+        <% } %>
+      </div>
+      <div class="username">
+        <span><%= user.username %></span>
+        <span><%= user.email %></span>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<div class="wrapper-postingan">
+  <% forms.forEach(form => { %>
+  <a href="/submit-course/<%= form.form_id %>" class="postingan">
+      <div class="top">
+        <div class="judul">
+          <p class="judul-form">
+            <%= form.title %>
+          </p>
+       </div>
+        <div class="deskripsi">
+          <%= form.description %>
+        </div>
+      </div>
+      <div class="bottom">
+          <div class="pic-uploader">
+            <% if (form.avatar) { %>
+              <img src="./img/<%= form.avatar %>" width="100" height="100">
+            <% } else { %>
+              <img src="./img/akun.png" width="100" height="100">
+            <% } %>
+          </div>
+          <div class="username">
+            <span class="text-white"><%= form.username %></span>
+          </div>
+      </div>
+    </a>
+  <% }); %>
+</div>
+
+<div class="btn-add-form">
+  <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">
+    +
+  </button>
+</div>
+
+
+<!-- Modal -->
+<div class="modal fade " id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog ">
+    <div class="modal-content container-buat-form">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Make own form</h1>
+      </div>
+      <div class="modal-body bottom">
+        <form action="/buat-form" method="post">
+          <div class="mb-1">
+            <label for="title" class="form-label">Course name</label>
+            <input type="text" name="title" class="form-control" id="username">
+          </div>
+          <div class="mb-1">
+            <label for="description" class="form-label">Description</label>
+            <textarea name="description" class="form-control" rows="3"></textarea>
+          </div>
+          <div class="modal-footer mt-4">
+            <button type="submit">Save</button>
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          </div>
+          
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

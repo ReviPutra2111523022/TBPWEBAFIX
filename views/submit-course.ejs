@@ -1,0 +1,70 @@
+<nav class="wrapper-navbar">
+  <div class="navbar">
+    <div class="account">
+      <div class="pic">
+       
+      </div>
+      <div class="username">
+        <span><%= user.username %></span>
+        <span><%= user.email %></span>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<div class="container-submit">
+  <div class="wrapper-submit">
+    <a href="/"><i class="bi bi-arrow-left-short"></i></a>
+    <div class="detail-course">
+      <div class="left">
+        <span><%= form.title %></span>
+        <span><%= form.description %></span>
+      </div>
+      <div class="right btn-add-submission">
+        <% if (isSubmitted) { %>
+          <div class="submitted">
+            <span class="submitted-info">Submitted at <%= moment(submission.created_at).format('LL') %></span>
+            <a href="/download/<%= submission.user_id %>/<%= submission.form_id %>" class="btn-download">
+            Unduh file
+            </a>
+          </div>
+          <% } else { %>
+          <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            Add submission
+          </button>
+          <% } %>
+      </div>
+    </div>
+  </div>
+  
+</div>
+<!-- Modal -->
+<div class="modal fade " id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog ">
+    <div class="modal-content container-buat-form">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Make own form</h1>
+      </div>
+      <div class="modal-body bottom">
+        <form action="/submit-course" method="post" enctype="multipart/form-data">
+          <div class="mb-3">
+            <div class="mb-3">
+              <input type="hidden" name="user_id" value="<%= user.user_id %>">
+              <input type="hidden" name="form_id" value="<%= form.form_id %>">
+            </div>
+            <label for="description" class="form-label">Description</label>
+            <textarea name="description" id="description" class="form-control" rows="3"></textarea>
+          </div>
+          <div class="mb-3">
+            <label for="uploaded_file" class="form-label">file</label>
+            <input type="file" name="uploaded_file" class="form-control" id="uploaded_file">
+          </div>
+          <div class="modal-footer mt-4">
+            <button type="submit">Save</button>
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

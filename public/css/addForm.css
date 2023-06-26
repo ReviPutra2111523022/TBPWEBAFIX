@@ -1,0 +1,21 @@
+
+.container-buat-form .bottom form{
+  padding:25px;
+  color:#fff;
+  background-color: #292F36;
+  border-radius: 4px;
+}
+
+.container-buat-form .bottom form div button{
+  width:70px;
+  height:35px;
+  border-radius:2px;
+  border:0;
+  background-color: #FF6B6B;
+  color:#fff;
+  transition:.2s;
+}
+.container-buat-form .bottom form div button:hover{
+  background-color: #d45959;
+}
+

@@ -1,0 +1,106 @@
+.container-submit{
+  width: 100%;
+  display:flex;
+  justify-content: center;
+  align-items: start;
+}
+
+.wrapper-submit{
+  width: 95%;
+  border-radius: 5px;
+  background-color: #292f38;
+  padding:40px;
+  margin-top:30px;
+  position:relative;
+  padding-left:50px;
+
+  
+}
+
+.wrapper-submit .detail-course{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  
+}
+
+.wrapper-submit .detail-course .left{
+  display:flex;
+  flex-direction: column;
+  
+}
+
+.wrapper-submit .detail-course .left span:nth-child(1){
+  font-style: italic;
+  font-size:18px;
+  font-weight:600;
+  color:#ffff;
+
+}
+.wrapper-submit .detail-course .left span:nth-child(2){
+  font-style: italic;
+  font-size:14px;
+  font-weight:600;
+  color:#d14444;
+}
+
+
+.btn-add-submission{
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  
+}
+
+.btn-add-submission button{
+  color:#ffff;
+  width:120px;
+  height:40px;
+  border-radius:4px;
+  background-color: #1BA097 ;
+  font-size:14px;
+  font-weight:600;
+  border:0;
+  margin-right:50px;
+  transition:.2s;
+}
+
+
+.submitted{
+  display:flex;
+  gap:15px;
+  align-items: center;
+}
+
+.submitted-info{
+  color:#4ecdc4;
+}
+
+.btn-download{
+  text-decoration: none;
+  background-color:#4ecdc4;
+  color:#fff;
+  padding:8px 12px;;
+  border-radius: 4px;
+  transition:.2s;
+}
+
+.btn-download:hover{
+  background-color:#3b9b95;
+}
+
+.bi-arrow-left-short{
+  position:absolute;
+  top:10px;
+  left:10px;
+  color:#fff;
+  font-size:30px;
+  padding:1px 8px;
+  border-radius:50%;
+  transition:.2s;
+}
+
+.bi-arrow-left-short:hover{
+  background:rgb(77, 77, 77);
+}
